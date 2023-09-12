@@ -1,14 +1,7 @@
 #!/usr/bin/python3
-
-""" Define Geometry module """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""Defines a Python class-to-JSON function."""
 
 
-class Rectangle(BaseGeometry):
-    """ Rectangle body """
-
-    def __init__(self, width, height):
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+def class_to_json(obj):
+    """Return the dictionary represntation of a simple data structure."""
+    return obj.__dict__
